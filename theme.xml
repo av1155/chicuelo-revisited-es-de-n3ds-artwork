@@ -1,224 +1,169 @@
 <!--
-theme name:     Chicuelo
-author:         Nico La Rosa - Chicuelo
-website:        www.chicuelo.com.ar
-
-font:           Roboto-Medium.ttf
-
-# Thanks and Credits
-Some controllers used in this theme are created by great artists who kindly agreed to include their art within the theme - here you can find their artwork:
-
-Ricky Romero - https://dribbble.com/RickyRomero
-David McLeod - https://dribbble.com/Mucx
-Craig Erskine - https://dribbble.com/craigerskine
-Memory Noise - https://dribbble.com/memorynoise
-
-Special thanks to @EctoOne who helped on the improvement of this theme and it looks great in any resolution - thanks to him!
-Special thanks to @cosmo0 who contributed with some art, various logos and important information for each system!
-Special thanks to @movisman who helped make the theme to look beautiful in every resolution, and for providing various logos and system information!
-
-# License
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please see README.md for full details.
+theme name:    Chicuelo (Revisited) (ES-DE Edition)
+created by:    Chicuelo
+ported from:   https://github.com/chicueloarcade/es-theme-Chicuelo
+ported by:     anthonycaccese (change log can be found at https://github.com/anthonycaccese/chicuelo-revisited-es-de/blob/master/readme.md)
+license:       creative commons CC-BY-NC-SA
 -->
 
 <theme>
-<formatVersion>4</formatVersion>
- 
 
-<!-- System View -->
+   <variables>
+      <spacerImage>./_inc/images/space.png</spacerImage>
+      <fontRegular>./_inc/fonts/Roboto-Medium.ttf</fontRegular>
+      <fontLogo>./_inc/fonts/ChangaOne-Italic.ttf</fontLogo>
+   </variables>
 
-<feature supported="carousel">
-<view name="system">
- <image name="background" extra="true">
-	<tile>false</tile>
-	<path>./_assets/system-global-bg.jpg</path>
-	<size>1 1</size>
-	<pos>0 0</pos>
- </image>
- 
- <text name="shortdescription" extra="true">
-	<fontPath>./_assets/Roboto-Medium.ttf</fontPath>
-	<alignment>center</alignment>
-	<forceUppercase>1</forceUppercase>
-	<fontSize>0.03</fontSize>
-	<color>818181</color>
-	<origin>0.5 0.5</origin>
-	<pos>0.232 0.25</pos>
-	<size>0.32 0.1</size>
- </text>
+   <view name="system">
+      <image name="system-view-background">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>./_inc/images/system-view-background.jpg</path>
+         <zIndex>0</zIndex>
+      </image>
+      <text name="game-count">
+         <origin>0.5 1</origin>
+         <pos>0.232291666666667 0.34</pos>
+         <fontPath>${fontRegular}</fontPath>
+         <fontSize>0.02</fontSize>
+         <systemdata>gamecount</systemdata>
+         <color>818181</color>
+      </text>
+      <carousel name="system-carousel">
+         <origin>0.5 0.5</origin>
+         <pos>0.232291666666667 0.5</pos>
+         <size>0.355208333333333 0.214814814814815</size>
+         <type>vertical</type>
+         <color>00000000</color>
+         <staticImage>./_inc/systems/${system.theme}.svg</staticImage>
+         <unfocusedItemOpacity>0.2</unfocusedItemOpacity>
+         <imageColor>4f5159</imageColor>
+         <itemScale>1.4</itemScale>
+         <itemSize>0.15625 0.106666666666667</itemSize>
+         <maxItemCount>1</maxItemCount>
+         <itemTransitions>animate</itemTransitions>
+         <fastScrolling>true</fastScrolling>
+      </carousel>
+      <gameselector name="selector-random">
+         <selection>random</selection>
+      </gameselector>
+      <image name="system-art">
+         <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
+         <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
+         <imageType>screenshot,fanart</imageType>
+         <gameselector>selector-random</gameselector>
+      </image>
+      <image name="system-art-chicuelo">
+         <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
+         <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
+         <path>./_inc/systems/${system.theme}.jpg</path>
+      </image>
+      <helpsystem name="help">
+         <origin>0.5 0</origin>
+         <pos>0.232291666666667 0.68</pos>
+         <fontPath>${fontRegular}</fontPath>
+         <fontSize>0.02</fontSize>
+         <letterCase>capitalize</letterCase>
+         <textColor>818181</textColor>
+         <iconColor>a1a1a1</iconColor>
+      </helpsystem>
+   </view>
 
- <image name="logo">
-	<path>./_assets/logos/${system.theme}.svg</path>
-	<color>4f5159</color>
+   <view name="gamelist">
+      <image name="gamelist-view-background">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>./_inc/images/gamelist-view-background.jpg</path>
+         <zIndex>0</zIndex>
+      </image>
+      <image name="system-logo">
+         <origin>0.5 0.5</origin>
+         <pos>0.266666666666667 0.112037037037037</pos><!-- 512 121 -->
+         <maxSize>0.15625 0.055555555555556</maxSize><!-- 400 80 -->
+         <path>./_inc/systems/${system.theme}.svg</path>
+         <color>ffffffaa</color>
+      </image>
+      <text name="custom-collection-name">
+         <fontPath>${fontLogo}</fontPath>
+      </text>
+      <textlist name="gamelist">
+         <pos>0.092708333333333 0.181481481481481</pos><!-- 178 196 -->
+         <size>0.348958333333333 0.75</size><!-- 670 810 -->
+         <fontPath>${fontRegular}</fontPath>
+         <fontSize>0.025925925925926</fontSize><!-- 28 -->
+         <lineSpacing>1.928571428571429</lineSpacing><!-- 54/28 -->
+         <selectorHeight>0.05</selectorHeight><!-- 54 -->
+         <selectorVerticalOffset>-0.005</selectorVerticalOffset>
+         <horizontalMargin>0.03125</horizontalMargin><!-- 60 -->
+         <selectorImagePath>./_inc/images/selector-image.svg</selectorImagePath>
+         <selectedColor>ffffff</selectedColor>
+         <primaryColor>4f5159</primaryColor>
+         <secondaryColor>4f5159</secondaryColor>
+         <selectorColor>78c7ef</selectorColor>
+      </textlist>
+      <video name="game-art">
+         <origin>0.5 0.5</origin>
+         <delay>3</delay>
+         <interpolation>nearest</interpolation>
+         <pillarboxes>false</pillarboxes>
+         <imageType>miximage,screenshot,titlescreen,fanart,cover</imageType>
+      </video>
+      <text name="game-description">
+         <origin>0.5 0</origin>
+         <fontPath>${fontRegular}</fontPath>
+         <fontSize>0.02</fontSize>
+         <metadata>description</metadata>
+         <container>true</container>
+         <containerStartDelay>6</containerStartDelay>
+         <color>515151</color>
+         <zIndex>3</zIndex>
+      </text>
+      <helpsystem name="help">
+         <origin>0.5 1</origin>
+         <fontPath>${fontRegular}</fontPath>
+         <letterCase>capitalize</letterCase>
+         <textColor>818181</textColor>
+         <iconColor>a1a1a1</iconColor>
+      </helpsystem>
+   </view>
 
- </image>
-
- <carousel name="systemcarousel">
-	<type>vertical</type>
-	<color>00000000</color>
-	<origin>0.5 0.5</origin>
-	<pos>0.232 0.415</pos>
-	<size>1 0.16</size> 
-	<logoScale>0.7</logoScale>
-	<logoSize>0.3 0.2</logoSize>
-	<maxLogoCount>1</maxLogoCount>
- </carousel>
-
- <text name="systemInfo">
-	<fontPath>./_assets/Roboto-Medium.ttf</fontPath>
-	<alignment>center</alignment>
-	<backgroundColor>00000000</backgroundColor>
-	<color>4f5159</color>
-	<origin>0.5 0.5</origin>
-	<pos>0.232 0.77</pos>
-	<size>0.980 0.050</size>
-	<fontSize>0.025</fontSize>
- </text>
- 
- <text name="longdescription" extra="true">
-	<fontPath>./_assets/Roboto-Medium.ttf</fontPath>
-	<alignment>center</alignment>
-	<forceUppercase>0</forceUppercase>
-	<fontSize>0.02</fontSize>
-	<color>818181</color>
-	<origin>0.5 0.5</origin>
-	<pos>0.232 0.58</pos>
-	<size>0.20 0.1</size>
- </text>
- 
-<!--
-
- <image name="indicator" extra="true">
-	<path>./_assets/indicators/${system.theme}.png</path>
-	<tile>false</tile>
-	<origin>0.5 0.5</origin>
-	<pos>0.027 0.5</pos>
-	<size>0.006 0.60</size>
-  </image>
-
--->
-
- <image name="character" extra="true">
-	<path>./_assets/characters/${system.theme}.jpg</path>
-	<tile>false</tile>
-	<origin>0.5 0.5</origin>
-	<pos>0.678 0.5</pos>
-	<size>0.535 0.85</size>
-  </image>
- 
- <image name="controller" extra="true">
-	<path>./_assets/controllers/${system.theme}.png</path>
-	<tile>false</tile>
-	<origin>1 1</origin>
-	<pos>0.9785 0.975</pos>
-	<size>0.275 0.4</size>
-  </image>
-
- <helpsystem name="help">
-    <fontPath>./_assets/Roboto-Medium.ttf</fontPath>
-    <fontSize>0.021</fontSize>
-	<pos>0.054 0.975</pos>
-	<textColor>818181</textColor>
-    <iconColor>818181</iconColor>
- </helpsystem>
-  
-</view>
-</feature>
-
-
-
-
-
-<!-- Gamelist View -->
-
-<view name="basic, detailed, video, grid">
-
- <image name="background" extra="true">
-	<tile>false</tile>
-	<path>./_assets/ingame-global-bg.jpg</path>
-	<size>1 1</size>
-	<pos>0 0</pos>
- </image>
-
- <image name="logo2" extra="true">
-	<path>./_assets/logos/${system.theme}.svg</path>
-	<color>4f5159</color>
-	<origin>0.5 0.5</origin>
-	<pos>0.553 0.821</pos>
-	<maxSize>0.16 0.16</maxSize>
- </image>
- 
- <text name="shortdescription" extra="true">
-	<pos>1 1</pos>
- </text>
- 
- <text name="longdescription" extra="true">
-	<fontPath>./_assets/Roboto-Medium.ttf</fontPath>
-	<forceUppercase>0</forceUppercase>
-	<fontSize>0.02</fontSize>
-	<color>818181</color>
-	<origin>0.5 0.5</origin>
-	<pos>0.789 0.821</pos>
-	<size>0.25 0.2</size>
- </text>
- 
-<textlist name="gamelist">
-	<selectorColor>ffffff</selectorColor>
-	<selectorImagePath>./_assets/icon.png</selectorImagePath>
-	<selectedColor>78c7ef</selectedColor>
-	<selectorHeight>.05</selectorHeight>
-	<primaryColor>dee0e8</primaryColor>
-	<secondaryColor>eac428</secondaryColor>
-	<fontPath>./_assets/Roboto-Medium.ttf</fontPath>
-	<alignment>left</alignment>
-	<forceUppercase>1</forceUppercase>
-	<pos>0.07 0.12</pos>
-	<size>0.395 0.75</size>
-	<fontSize>0.03</fontSize>
-	<lineSpacing>1.70</lineSpacing>
-	<horizontalMargin>0.05</horizontalMargin>
-</textlist>
-
-<helpsystem name="help">
-    <fontPath>./_assets/Roboto-Medium.ttf</fontPath>
-    <fontSize>0.021</fontSize>
-	<pos>0.054 0.975</pos>
-	<textColor>818181</textColor>
-    <iconColor>818181</iconColor>
-</helpsystem>
-
-<!-- Hide Unused Elements -->	
-<text name="md_description, md_lbl_players, md_players, md_lbl_developer, md_developer, md_lbl_publisher, md_publsher, md_lbl_genre, md_genre, md_lbl_playcount, md_playcount, md_lbl_lastplayed, md_lbl_releasedate, md_lbl_rating">
-	<pos>1 1</pos>
-</text>
-<datetime name="md_lastplayed, md_releasedate">
-	<pos>1 1</pos>
-</datetime>
-<rating name="md_rating">
-	<pos>1 1</pos>
-</rating>
-
-</view>
-
-<view name="basic, detailed, grid">
- <image name="md_image">
-	<origin>0.5 0.5</origin>
-	<pos>0.6925 0.3915</pos>
-	<maxSize>0.4167 0.5556</maxSize>
- </image>
-</view>
-
-<feature supported="video">
-<view name="video">
- <video name="md_video">
-	<origin>0.5 0.5</origin>
-	<pos>0.6925 0.3915</pos>
-	<maxSize>0.4167 0.5556</maxSize>
-	<delay>1.5</delay>
-	<showSnapshotNoVideo>true</showSnapshotNoVideo>
-	<showSnapshotDelay>true</showSnapshotDelay>
- </video>
-</view>
-</feature>
+   <aspectRatio name="16:9">
+      <view name="gamelist">
+         <video name="game-art">
+            <pos>0.693229166666667 0.398148148148148</pos><!-- 1331 430-->
+            <cropSize>0.428125 0.57037037037037</cropSize><!-- 822 616 -->
+         </video>
+         <text name="game-description">
+            <pos>0.693229166666667 0.726</pos><!-- 1331 -->
+            <size>0.376041666666667 0.1</size>
+         </text>
+         <helpsystem name="help">
+            <pos>0.693229166666667 0.88</pos><!-- 131 -->
+            <fontSize>0.02</fontSize>
+            <entrySpacing>0.006</entrySpacing>
+            <iconTextSpacing>0.002</iconTextSpacing>
+         </helpsystem>
+      </view>
+   </aspectRatio>
+   <aspectRatio name="16:10">
+      <view name="gamelist">
+         <video name="game-art">
+            <pos>0.693229166666667 0.37962962962963</pos><!-- 1331 410-->
+            <cropSize>0.428125 0.513888888888889</cropSize><!-- 740 555 -->
+         </video>
+         <text name="game-description">
+            <pos>0.693229166666667 0.686</pos><!-- 1331 x -->
+            <size>0.376041666666667 0.14</size>
+         </text>
+         <helpsystem name="help">
+            <pos>0.693229166666667 0.88</pos><!-- 1331 x -->
+            <fontSize>0.019</fontSize>
+            <entrySpacing>0.006</entrySpacing>
+            <iconTextSpacing>0.002</iconTextSpacing>
+         </helpsystem>
+      </view>
+   </aspectRatio>
 
 </theme>
