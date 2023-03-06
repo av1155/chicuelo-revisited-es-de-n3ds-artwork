@@ -45,20 +45,9 @@ license:       creative commons CC-BY-NC-SA
          <itemTransitions>animate</itemTransitions>
          <fastScrolling>true</fastScrolling>
       </carousel>
-      <gameselector name="selector-random">
+      <gameselector name="system-art-selector">
          <selection>random</selection>
       </gameselector>
-      <image name="system-art">
-         <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
-         <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
-         <imageType>screenshot,fanart</imageType>
-         <gameselector>selector-random</gameselector>
-      </image>
-      <image name="system-art-chicuelo">
-         <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
-         <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
-         <path>./_inc/systems/${system.theme}.jpg</path>
-      </image>
       <helpsystem name="help">
          <origin>0.5 0</origin>
          <pos>0.232291666666667 0.68</pos>
@@ -69,6 +58,52 @@ license:       creative commons CC-BY-NC-SA
          <iconColor>a1a1a1</iconColor>
       </helpsystem>
    </view>
+   <variant name="artwork-chicuelo,artwork-screenshots">
+      <view name="system">
+         <image name="system-art">
+            <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
+            <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
+            <imageType>screenshot,fanart</imageType>
+            <gameselector>system-art-selector</gameselector>
+         </image>
+         <image name="system-art-chicuelo">
+            <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
+            <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
+            <path>./_inc/systems/${system.theme}.jpg</path>
+         </image>
+      </view>
+   </variant>
+   <variant name="artwork-chicuelo">
+      <view name="system">
+         <image name="system-art">
+            <zIndex>10</zIndex>
+         </image>
+         <image name="system-art-chicuelo">
+            <zIndex>11</zIndex>
+         </image>
+      </view>
+   </variant>
+   <variant name="artwork-screenshots">
+      <view name="system">
+         <image name="system-art">
+            <zIndex>11</zIndex>
+         </image>
+         <image name="system-art-chicuelo">
+            <zIndex>10</zIndex>
+         </image>
+      </view>
+   </variant>
+   <variant name="artwork-video">
+      <view name="system">
+         <video name="system-art">
+            <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
+            <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
+            <imageType>screenshot,fanart</imageType>
+            <gameselector>system-art-selector</gameselector>
+            <delay>1.5</delay>
+         </video>
+      </view>
+   </variant>
 
    <view name="gamelist">
       <image name="gamelist-view-background">

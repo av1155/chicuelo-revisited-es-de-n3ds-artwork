@@ -21,4 +21,17 @@
       <entry>builtin-fade</entry>
    </suppressTransitionProfiles>
 
+   <variant name="artwork-screenshots">
+      <label>Artwork: Screenshots</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="artwork-video">
+      <label>Artwork: Video</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="artwork-chicuelo">
+      <label>Artwork: Chicuelo</label>
+      <selectable>true</selectable>
+   </variant>
+
 </themeCapabilities>
