@@ -1,4 +1,4 @@
-# Chicuelo (Revisited) (ES-DE Version)
+# Chicuelo (Revisited) for ES-DE
 
 This is port of the Chicuelo theme (originally by [Chicuelo](https://github.com/chicueloarcade)) from Retropie to ES-DE v2.x
 
