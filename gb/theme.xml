@@ -1,0 +1,19 @@
+<theme>
+   <include>./../theme.xml</include>
+   <variant name="artwork-chicuelo,artwork-screenshots">
+      <view name="system">
+         <image name="system-art">
+            <saturation>0</saturation>
+            <color>a0a840</color>
+         </image>
+      </view>
+   </variant>
+   <variant name="artwork-video">
+      <view name="system">
+         <video name="system-art">
+            <saturation>0</saturation>
+            <color>a0a840</color>
+         </video>
+      </view>
+   </variant>
+</theme>

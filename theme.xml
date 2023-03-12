@@ -86,15 +86,15 @@ license:       creative commons CC-BY-NC-SA
    </view>
    <variant name="artwork-chicuelo,artwork-screenshots">
       <view name="system">
-         <image name="system-art">
+         <image name="system-art,system-art-chicuelo">
             <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
             <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
+         </image>
+         <image name="system-art">
             <imageType>screenshot,fanart</imageType>
             <gameselector>system-art-selector</gameselector>
          </image>
          <image name="system-art-chicuelo">
-            <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
-            <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
             <path>./_inc/systems/artwork-chicuelo/${system.theme}.jpg</path>
          </image>
       </view>
