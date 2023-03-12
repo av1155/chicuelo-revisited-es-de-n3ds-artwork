@@ -4,5 +4,8 @@
       <gameselector name="system-art-selector">
          <selection>lastplayed</selection>
       </gameselector>
+      <text name="system-label">
+         <text>${systemHardwareType}</text>
+      </text>
    </view>
 </theme>

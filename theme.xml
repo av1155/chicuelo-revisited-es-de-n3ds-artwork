@@ -8,9 +8,13 @@ license:       creative commons CC-BY-NC-SA
 
 <theme>
 
+   <include>./_inc/systems/metadata-global/_default.xml</include>
+   <include>./_inc/systems/metadata-global/${system.theme}.xml</include>
+
    <variables>
       <spacerImage>./_inc/images/space.png</spacerImage>
       <fontRegular>./_inc/fonts/Roboto-Medium.ttf</fontRegular>
+      <fontBold>./_inc/fonts/Roboto-Bold.ttf</fontBold>
       <fontLogo>./_inc/fonts/ChangaOne-Italic.ttf</fontLogo>
    </variables>
 
@@ -22,21 +26,22 @@ license:       creative commons CC-BY-NC-SA
          <path>./_inc/images/system-view-background.jpg</path>
          <zIndex>0</zIndex>
       </image>
-      <text name="game-count">
+      <text name="system-label">
          <origin>0.5 1</origin>
-         <pos>0.232291666666667 0.34</pos>
-         <fontPath>${fontRegular}</fontPath>
-         <fontSize>0.02</fontSize>
-         <systemdata>gamecount</systemdata>
-         <color>818181</color>
+         <pos>0.232291666666667 0.22</pos>
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.025</fontSize>
+         <text>${systemReleaseYear}  ·  ${systemHardwareType}</text>
+         <letterCase>uppercase</letterCase>
+         <color>a1a1a1</color>
       </text>
       <carousel name="system-carousel">
          <origin>0.5 0.5</origin>
-         <pos>0.232291666666667 0.5</pos>
+         <pos>0.232291666666667 0.36</pos>
          <size>0.355208333333333 0.214814814814815</size>
          <type>vertical</type>
          <color>00000000</color>
-         <staticImage>./_inc/systems/${system.theme}.svg</staticImage>
+         <staticImage>./_inc/systems/logos/${system.theme}.svg</staticImage>
          <unfocusedItemOpacity>0.2</unfocusedItemOpacity>
          <imageColor>4f5159</imageColor>
          <itemScale>1.4</itemScale>
@@ -45,18 +50,38 @@ license:       creative commons CC-BY-NC-SA
          <itemTransitions>animate</itemTransitions>
          <fastScrolling>true</fastScrolling>
       </carousel>
-      <gameselector name="system-art-selector">
-         <selection>random</selection>
-      </gameselector>
-      <helpsystem name="help">
+      <text name="system-description">
          <origin>0.5 0</origin>
-         <pos>0.232291666666667 0.68</pos>
+         <pos>0.232291666666667 0.52</pos>
+         <size>0.22 0.13</size>
+         <fontPath>${fontRegular}</fontPath>
+         <fontSize>0.02</fontSize>
+         <text>${systemDescription}</text>
+         <verticalAlignment>top</verticalAlignment>
+         <horizontalAlignment>center</horizontalAlignment>
+         <color>515151</color>
+      </text>
+      <text name="system-game-count">
+         <origin>0.5 1</origin>
+         <pos>0.232291666666667 0.74</pos>
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.024</fontSize>
+         <systemdata>gamecount</systemdata>
+         <letterCase>uppercase</letterCase>
+         <color>818181</color>
+      </text>
+      <helpsystem name="help">
+         <origin>0.5 1</origin>
+         <pos>0.232291666666667 0.82</pos>
          <fontPath>${fontRegular}</fontPath>
          <fontSize>0.02</fontSize>
          <letterCase>capitalize</letterCase>
          <textColor>818181</textColor>
          <iconColor>a1a1a1</iconColor>
       </helpsystem>
+      <gameselector name="system-art-selector">
+         <selection>random</selection>
+      </gameselector>
    </view>
    <variant name="artwork-chicuelo,artwork-screenshots">
       <view name="system">
@@ -69,7 +94,7 @@ license:       creative commons CC-BY-NC-SA
          <image name="system-art-chicuelo">
             <pos>0.410416666666667 0.069444444444444</pos><!-- 788 75 -->
             <cropSize>0.535416666666667 0.855555555555556</cropSize><!-- 1028 924 -->
-            <path>./_inc/systems/${system.theme}.jpg</path>
+            <path>./_inc/systems/artwork-chicuelo/${system.theme}.jpg</path>
          </image>
       </view>
    </variant>
@@ -117,7 +142,7 @@ license:       creative commons CC-BY-NC-SA
          <origin>0.5 0.5</origin>
          <pos>0.266666666666667 0.112037037037037</pos><!-- 512 121 -->
          <maxSize>0.15625 0.055555555555556</maxSize><!-- 400 80 -->
-         <path>./_inc/systems/${system.theme}.svg</path>
+         <path>./_inc/systems/logos/${system.theme}.svg</path>
          <color>ffffffaa</color>
       </image>
       <text name="custom-collection-name">
@@ -165,6 +190,12 @@ license:       creative commons CC-BY-NC-SA
    </view>
 
    <aspectRatio name="16:9">
+      <view name="system">
+         <helpsystem name="help">
+            <entrySpacing>0.006</entrySpacing>
+            <iconTextSpacing>0.002</iconTextSpacing>
+         </helpsystem>
+      </view>
       <view name="gamelist">
          <video name="game-art">
             <pos>0.693229166666667 0.398148148148148</pos><!-- 1331 430-->
@@ -183,6 +214,12 @@ license:       creative commons CC-BY-NC-SA
       </view>
    </aspectRatio>
    <aspectRatio name="16:10">
+      <view name="system">
+         <helpsystem name="help">
+            <entrySpacing>0.006</entrySpacing>
+            <iconTextSpacing>0.002</iconTextSpacing>
+         </helpsystem>
+      </view>
       <view name="gamelist">
          <video name="game-art">
             <pos>0.693229166666667 0.37962962962963</pos><!-- 1331 410-->
