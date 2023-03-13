@@ -22,4 +22,4 @@ All artwork and layouts were designed and created by [Chicuelo](https://github.c
 
 ## **License**
 Creative Commons CC-BY-NC-SA - https://creativecommons.org/licenses/by-nc-sa/2.0/
-You are free to share and adapt this theme as long as you provide attribution back to me (and the above credits) as well share any updates you make under the same licence terms.
+You are free to share and adapt this theme as long as you provide attribution back as well as share any updates you make under the same licence terms.  You may not use this theme for commercial purposes.
