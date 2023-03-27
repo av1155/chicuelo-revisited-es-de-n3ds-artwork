@@ -65,6 +65,8 @@ license:       creative commons CC-BY-NC-SA
          <text>${systemDescription}</text>
          <verticalAlignment>top</verticalAlignment>
          <horizontalAlignment>center</horizontalAlignment>
+         <container>true</container>
+         <containerScrollSpeed>0.6</containerScrollSpeed>
          <color>515151</color>
       </text>
       <text name="system-game-count">
@@ -183,6 +185,7 @@ license:       creative commons CC-BY-NC-SA
          <metadata>description</metadata>
          <container>true</container>
          <containerStartDelay>6</containerStartDelay>
+         <containerScrollSpeed>0.6</containerScrollSpeed>
          <color>515151</color>
          <zIndex>3</zIndex>
       </text>
