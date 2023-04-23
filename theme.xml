@@ -18,6 +18,17 @@ license:       creative commons CC-BY-NC-SA
       <fontBold>./_inc/fonts/Roboto-Bold.ttf</fontBold>
       <fontLogo>./_inc/fonts/ChangaOne-Italic.ttf</fontLogo>
    </variables>
+   
+   <view name="system,gamelist">
+      <helpsystem name="help">
+         <originDimmed>0.5 0</originDimmed>
+         <posDimmed>0.5 0.94</posDimmed>
+         <textColorDimmed>cccccc</textColorDimmed>
+         <iconColorDimmed>cccccc</iconColorDimmed>
+         <fontSizeDimmed>0.024</fontSizeDimmed>
+         <opacityDimmed>1.0</opacityDimmed>
+      </helpsystem>
+   </view>
 
    <view name="system">
       <image name="system-view-background">
